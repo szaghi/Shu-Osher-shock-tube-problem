@@ -69,3 +69,10 @@ colors          = True
 quiet           = False
 log             = True
 jobs            = 10
+
+# rules
+[rule-makedoc]
+help   = Rule for building documentation from source files
+rule_1 = rm -rf doc/html/*
+rule_2 = ford doc/main_page.md
+rule_3 = cp -r doc/html/publish/* doc/html/
