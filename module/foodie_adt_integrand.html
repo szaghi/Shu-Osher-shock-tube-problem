@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Regression-test results of Shu-Osher shock tube problem">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>foodie_adt_integrand &ndash; Shu-Osher-shock-tube-problem</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Shu-Osher-shock-tube-problem </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/integrate_euler_1d.html">Program</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>foodie_adt_integrand 
+    <small>Module</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/foodie_adt_integrand.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/foodie_adt_integrand.f90.html'>foodie_adt_integrand.f90</a></li>
+  
+     <li class="active">foodie_adt_integrand</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Abstract Interfaces</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#interface-assignment_integrand">assignment_integrand</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#interface-time_derivative">time_derivative</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#interface-local_error_operator">local_error_operator</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#interface-integrand_op_real">integrand_op_real</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#interface-real_op_integrand">real_op_integrand</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#interface-symmetric_operator">symmetric_operator</a>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Derived Types</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html#type-integrand">integrand</a>
+      
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title">All Modules</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/data_type_command_line_interface.html">Data_Type_Command_Line_Interface</a>
+      
+      <a class="list-group-item" href="../module/foodie.html">foodie</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html">foodie_adt_integrand</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_adams_bashforth.html">foodie_integrator_adams_bashforth</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_adams_bashforth_moulton.html">foodie_integrator_adams_bashforth_moulton</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_adams_moulton.html">foodie_integrator_adams_moulton</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_emd_runge_kutta.html">foodie_integrator_emd_runge_kutta</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_euler_explicit.html">foodie_integrator_euler_explicit</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_leapfrog.html">foodie_integrator_leapfrog</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_low_storage_runge_kutta.html">foodie_integrator_low_storage_runge_kutta</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_tvd_runge_kutta.html">foodie_integrator_tvd_runge_kutta</a>
+      
+      <a class="list-group-item" href="../module/foodie_kinds.html">foodie_kinds</a>
+      
+      <a class="list-group-item" href="../module/pyplot_module.html">pyplot_module</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html">type_euler_1D</a>
+      
+      <a class="list-group-item" href="../module/type_weno_interpolator.html">type_weno_interpolator</a>
+      
+      <a class="list-group-item" href="../module/type_weno_interpolator_upwind.html">type_weno_interpolator_upwind</a>
+      
+      <a class="list-group-item" href="../module/wenoof.html">wenoof</a>
+      
+      <a class="list-group-item" href="../module/wenoof_kinds.html">wenoof_kinds</a>
+      
+    </div>
+  </div>
+  
+  
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href='../module/foodie_kinds.html'>foodie_kinds</a></li>
+      
+    </ul>
+  
+
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: module~~foodie_adt_integrand~~UsesGraph Pages: 1 -->
+<svg id="modulefoodie_adt_integrandUsesGraph" width="231pt" height="32pt"
+ viewBox="0.00 0.00 231.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~foodie_adt_integrand~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~foodie_adt_integrand~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 227,-28 227,4 -4,4"/>
+<!-- module~foodie_adt_integrand -->
+<g id="module~~foodie_adt_integrand~~UsesGraph_node1" class="node"><title>module~foodie_adt_integrand</title>
+<polygon fill="none" stroke="black" points="223,-24 109,-24 109,-0 223,-0 223,-24"/>
+<text text-anchor="middle" x="166" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">foodie_adt_integrand</text>
+</g>
+<!-- module~foodie_kinds -->
+<g id="module~~foodie_adt_integrand~~UsesGraph_node2" class="node"><title>module~foodie_kinds</title>
+<g id="a_module~~foodie_adt_integrand~~UsesGraph_node2"><a xlink:href="../module/foodie_kinds.html" xlink:title="foodie_kinds">
+<polygon fill="#337ab7" stroke="#337ab7" points="73,-24 0,-24 0,-0 73,-0 73,-24"/>
+<text text-anchor="middle" x="36.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_kinds</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_adt_integrand -->
+<g id="module~~foodie_adt_integrand~~UsesGraph_edge1" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_adt_integrand</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M73.0159,-12C80.9599,-12 89.637,-12 98.3861,-12"/>
+<polygon fill="black" stroke="black" points="98.6504,-15.5001 108.65,-12 98.6504,-8.5001 98.6504,-15.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="26pt"
+ viewBox="0.00 0.00 641.00 25.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.811906 0.811906) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 785.5,-28 785.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="212,-24 158,-24 158,-0 212,-0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="294,-24 230,-24 230,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="262" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="439.5,-24 384.5,-24 384.5,-0 439.5,-0 439.5,-24"/>
+<text text-anchor="middle" x="412" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="594,-24 458,-24 458,-0 594,-0 594,-24"/>
+<text text-anchor="middle" x="526" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="666,-24 612,-24 612,-0 666,-0 666,-24"/>
+<text text-anchor="middle" x="639" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="781.5,-24 684.5,-24 684.5,-0 781.5,-0 781.5,-24"/>
+<text text-anchor="middle" x="733" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    
+    <p>Define the abstract type <em>integrand</em> for building FOODIE ODE integrators.</p>
+    
+    
+    <h3>Used By</h3>
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: module~~foodie_adt_integrand~~UsedByGraph Pages: 1 -->
+<svg id="modulefoodie_adt_integrandUsedByGraph" width="641pt" height="205pt"
+ viewBox="0.00 0.00 641.00 204.81" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~foodie_adt_integrand~~UsedByGraph" class="graph" transform="scale(0.648129 0.648129) rotate(0) translate(4 312)">
+<title>module~~foodie_adt_integrand~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-312 985,-312 985,4 -4,4"/>
+<!-- module~foodie_adt_integrand -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node1" class="node"><title>module~foodie_adt_integrand</title>
+<polygon fill="none" stroke="black" points="114,-146 0,-146 0,-122 114,-122 114,-146"/>
+<text text-anchor="middle" x="57" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50">foodie_adt_integrand</text>
+</g>
+<!-- module~foodie_integrator_euler_explicit -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node2" class="node"><title>module~foodie_integrator_euler_explicit</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node2"><a xlink:href="../module/foodie_integrator_euler_explicit.html" xlink:title="foodie_integrator_euler_explicit">
+<polygon fill="#337ab7" stroke="#337ab7" points="600.5,-308 438.5,-308 438.5,-284 600.5,-284 600.5,-308"/>
+<text text-anchor="middle" x="519.5" y="-293.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_euler_explicit</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_euler_explicit -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge14" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_euler_explicit</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M261,-275C314.859,-291.87 377.984,-297.229 428.253,-298.318"/>
+<polygon fill="black" stroke="black" points="428.396,-301.821 438.452,-298.484 428.511,-294.822 428.396,-301.821"/>
+</g>
+<!-- module~foodie_integrator_leapfrog -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node3" class="node"><title>module~foodie_integrator_leapfrog</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node3"><a xlink:href="../module/foodie_integrator_leapfrog.html" xlink:title="foodie_integrator_leapfrog">
+<polygon fill="#337ab7" stroke="#337ab7" points="589,-266 450,-266 450,-242 589,-242 589,-266"/>
+<text text-anchor="middle" x="519.5" y="-251.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_leapfrog</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_leapfrog -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge15" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_leapfrog</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M66.192,-146.327C80.7241,-167.314 112.993,-210.122 150,-235 192.826,-263.79 209.756,-259.576 259,-275"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M261,-275C293.249,-285.101 376.752,-276.035 439.996,-266.866"/>
+<polygon fill="black" stroke="black" points="440.579,-270.318 449.962,-265.396 439.558,-263.393 440.579,-270.318"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node4" class="node"><title>module~foodie_integrator_adams_bashforth</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node4"><a xlink:href="../module/foodie_integrator_adams_bashforth.html" xlink:title="foodie_integrator_adams_bashforth">
+<polygon fill="#337ab7" stroke="#337ab7" points="351.5,-226 168.5,-226 168.5,-202 351.5,-202 351.5,-226"/>
+<text text-anchor="middle" x="260" y="-211.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_adams_bashforth</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge16" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M75.1765,-146.193C93.0805,-158.383 122.337,-176.872 150,-188 160.999,-192.424 172.937,-196.216 184.745,-199.425"/>
+<polygon fill="black" stroke="black" points="184.051,-202.86 194.609,-201.984 185.809,-196.085 184.051,-202.86"/>
+</g>
+<!-- module~foodie_integrator_tvd_runge_kutta -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node5" class="node"><title>module~foodie_integrator_tvd_runge_kutta</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node5"><a xlink:href="../module/foodie_integrator_tvd_runge_kutta.html" xlink:title="foodie_integrator_tvd_runge_kutta">
+<polygon fill="#337ab7" stroke="#337ab7" points="608,-106 431,-106 431,-82 608,-82 608,-106"/>
+<text text-anchor="middle" x="519.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_tvd_runge_kutta</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_tvd_runge_kutta -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge17" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_tvd_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M261,-94C313.414,-86.8415 372.391,-86.3009 420.665,-87.7896"/>
+<polygon fill="black" stroke="black" points="420.683,-91.2922 430.797,-88.1364 420.923,-84.2963 420.683,-91.2922"/>
+</g>
+<!-- module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node6" class="node"><title>module~foodie</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node6"><a xlink:href="../module/foodie.html" xlink:title="foodie">
+<polygon fill="#337ab7" stroke="#337ab7" points="723,-186 669,-186 669,-162 723,-162 723,-186"/>
+<text text-anchor="middle" x="696" y="-171.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge18" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M108.514,-121.974C121.965,-118.908 136.508,-115.714 150,-113 198.209,-103.303 210.277,-100.654 259,-94"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M261,-94C275.344,-92.041 504.669,-49.724 518.5,-54"/>
+</g>
+<!-- module~foodie_integrator_low_storage_runge_kutta -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node7" class="node"><title>module~foodie_integrator_low_storage_runge_kutta</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node7"><a xlink:href="../module/foodie_integrator_low_storage_runge_kutta.html" xlink:title="foodie_integrator_low_storage_runge_kutta">
+<polygon fill="#337ab7" stroke="#337ab7" points="370,-66 150,-66 150,-42 370,-42 370,-66"/>
+<text text-anchor="middle" x="260" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_low_storage_runge_kutta</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_low_storage_runge_kutta -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge19" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_low_storage_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M75.1765,-121.807C93.0805,-109.617 122.337,-91.1282 150,-80 160.999,-75.5756 172.937,-71.7843 184.745,-68.5755"/>
+<polygon fill="black" stroke="black" points="185.809,-71.9154 194.609,-66.0159 184.051,-65.1397 185.809,-71.9154"/>
+</g>
+<!-- module~foodie_integrator_emd_runge_kutta -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node8" class="node"><title>module~foodie_integrator_emd_runge_kutta</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node8"><a xlink:href="../module/foodie_integrator_emd_runge_kutta.html" xlink:title="foodie_integrator_emd_runge_kutta">
+<polygon fill="#337ab7" stroke="#337ab7" points="352,-24 168,-24 168,-0 352,-0 352,-24"/>
+<text text-anchor="middle" x="260" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_emd_runge_kutta</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_emd_runge_kutta -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge20" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_emd_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M65.3544,-121.718C79.0558,-100.002 110.695,-55.0457 150,-33 153.447,-31.0666 157.041,-29.3082 160.737,-27.7092"/>
+<polygon fill="black" stroke="black" points="162.063,-30.9491 170.107,-24.0539 159.518,-24.4278 162.063,-30.9491"/>
+</g>
+<!-- module~foodie_integrator_adams_moulton -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node9" class="node"><title>module~foodie_integrator_adams_moulton</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node9"><a xlink:href="../module/foodie_integrator_adams_moulton.html" xlink:title="foodie_integrator_adams_moulton">
+<polygon fill="#337ab7" stroke="#337ab7" points="348,-146 172,-146 172,-122 348,-122 348,-146"/>
+<text text-anchor="middle" x="260" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_adams_moulton</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_moulton -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge21" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M114.257,-134C129.068,-134 145.481,-134 161.779,-134"/>
+<polygon fill="black" stroke="black" points="161.897,-137.5 171.897,-134 161.897,-130.5 161.897,-137.5"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node10" class="node"><title>module~foodie_integrator_adams_bashforth_moulton</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node10"><a xlink:href="../module/foodie_integrator_adams_bashforth_moulton.html" xlink:title="foodie_integrator_adams_bashforth_moulton">
+<polygon fill="#337ab7" stroke="#337ab7" points="633,-186 406,-186 406,-162 633,-162 633,-186"/>
+<text text-anchor="middle" x="519.5" y="-171.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_adams_bashforth_moulton</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge22" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M103.572,-146.041C118.29,-149.488 134.746,-152.882 150,-155 231.509,-166.317 324.003,-171.061 395.934,-172.978"/>
+<polygon fill="black" stroke="black" points="395.859,-176.477 405.944,-173.231 396.035,-169.48 395.859,-176.477"/>
+</g>
+<!-- module~foodie_integrator_euler_explicit&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge1" class="edge"><title>module~foodie_integrator_euler_explicit&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M600.668,-289.632C612.159,-286.338 623.341,-281.642 633,-275 661.059,-255.705 678.752,-219.143 687.754,-195.705"/>
+<polygon fill="black" stroke="black" points="691.06,-196.855 691.185,-186.261 684.481,-194.465 691.06,-196.855"/>
+</g>
+<!-- module~foodie_integrator_leapfrog&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge2" class="edge"><title>module~foodie_integrator_leapfrog&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M589.015,-243.784C604.001,-240.029 619.43,-234.925 633,-228 649.735,-219.46 665.652,-205.427 677.167,-193.806"/>
+<polygon fill="black" stroke="black" points="680.015,-195.892 684.392,-186.244 674.954,-191.057 680.015,-195.892"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge3" class="edge"><title>module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M351.654,-216.294C427.495,-216.566 538.199,-213.115 633,-195 641.665,-193.344 650.776,-190.762 659.265,-187.967"/>
+<polygon fill="black" stroke="black" points="660.581,-191.215 668.881,-184.631 658.287,-184.602 660.581,-191.215"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge4" class="edge"><title>module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M338.258,-201.999C367.406,-197.471 400.77,-192.288 430.804,-187.623"/>
+<polygon fill="black" stroke="black" points="431.507,-191.056 440.851,-186.062 430.433,-184.138 431.507,-191.056"/>
+</g>
+<!-- module~foodie_integrator_tvd_runge_kutta&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge5" class="edge"><title>module~foodie_integrator_tvd_runge_kutta&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M595.84,-106.015C608.628,-109.557 621.483,-114.123 633,-120 649.735,-128.54 665.652,-142.573 677.167,-154.194"/>
+<polygon fill="black" stroke="black" points="674.954,-156.943 684.392,-161.756 680.015,-152.108 674.954,-156.943"/>
+</g>
+<!-- program~integrate_euler_1d -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node11" class="node"><title>program~integrate_euler_1d</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node11"><a xlink:href="../program/integrate_euler_1d.html" xlink:title="integrate_euler_1D">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="981,-186 877,-186 877,-162 981,-162 981,-186"/>
+<text text-anchor="middle" x="929" y="-171.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">integrate_euler_1D</text>
+</a>
+</g>
+</g>
+<!-- module~foodie&#45;&gt;program~integrate_euler_1d -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge7" class="edge"><title>module~foodie&#45;&gt;program~integrate_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M723.245,-174.517C734.285,-174.71 747.266,-174.905 759,-175 795.443,-175.294 804.556,-175.209 841,-175 849.36,-174.952 858.171,-174.878 866.848,-174.791"/>
+<polygon fill="black" stroke="black" points="866.974,-178.29 876.937,-174.685 866.9,-171.291 866.974,-178.29"/>
+</g>
+<!-- module~type_euler_1d -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_node12" class="node"><title>module~type_euler_1d</title>
+<g id="a_module~~foodie_adt_integrand~~UsedByGraph_node12"><a xlink:href="../module/type_euler_1d.html" xlink:title="type_euler_1D">
+<polygon fill="#337ab7" stroke="#337ab7" points="841,-166 759,-166 759,-142 841,-142 841,-166"/>
+<text text-anchor="middle" x="800" y="-151.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">type_euler_1D</text>
+</a>
+</g>
+</g>
+<!-- module~foodie&#45;&gt;module~type_euler_1d -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge8" class="edge"><title>module~foodie&#45;&gt;module~type_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M723.003,-168.901C730.894,-167.354 739.845,-165.599 748.765,-163.85"/>
+<polygon fill="black" stroke="black" points="749.625,-167.248 758.765,-161.889 748.278,-160.379 749.625,-167.248"/>
+</g>
+<!-- module~foodie_integrator_low_storage_runge_kutta&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge9" class="edge"><title>module~foodie_integrator_low_storage_runge_kutta&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M341.132,-41.9988C392.893,-37.1423 461.055,-36.2405 518.5,-54"/>
+</g>
+<!-- module~foodie_integrator_emd_runge_kutta&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge10" class="edge"><title>module~foodie_integrator_emd_runge_kutta&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M352.081,-20.6386C401.997,-26.9129 464.515,-37.3102 518.5,-54"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M520.5,-54C568.946,-68.9772 590.971,-44.629 633,-73 661.224,-92.0526 678.869,-128.686 687.816,-152.204"/>
+<polygon fill="black" stroke="black" points="684.547,-153.456 691.223,-161.683 691.134,-151.089 684.547,-153.456"/>
+</g>
+<!-- module~foodie_integrator_adams_moulton&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge12" class="edge"><title>module~foodie_integrator_adams_moulton&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M348.248,-131.721C424.154,-131.334 536.77,-134.612 633,-153 641.665,-154.656 650.776,-157.238 659.265,-160.033"/>
+<polygon fill="black" stroke="black" points="658.287,-163.398 668.881,-163.369 660.581,-156.785 658.287,-163.398"/>
+</g>
+<!-- module~foodie_integrator_adams_moulton&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge11" class="edge"><title>module~foodie_integrator_adams_moulton&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M338.258,-146.001C367.406,-150.529 400.77,-155.712 430.804,-160.377"/>
+<polygon fill="black" stroke="black" points="430.433,-163.862 440.851,-161.938 431.507,-156.944 430.433,-163.862"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth_moulton&#45;&gt;module~foodie -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge13" class="edge"><title>module~foodie_integrator_adams_bashforth_moulton&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M633.478,-174C642.487,-174 651.095,-174 658.866,-174"/>
+<polygon fill="black" stroke="black" points="658.905,-177.5 668.905,-174 658.905,-170.5 658.905,-177.5"/>
+</g>
+<!-- module~type_euler_1d&#45;&gt;program~integrate_euler_1d -->
+<g id="module~~foodie_adt_integrand~~UsedByGraph_edge6" class="edge"><title>module~type_euler_1d&#45;&gt;program~integrate_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M841.184,-160.328C849.332,-161.611 858.075,-162.988 866.761,-164.356"/>
+<polygon fill="black" stroke="black" points="866.47,-167.853 876.893,-165.952 867.559,-160.939 866.47,-167.853"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmodulefoodie_adt_integrandUsedByGraph = svgPanZoom('#modulefoodie_adt_integrandUsedByGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="26pt"
+ viewBox="0.00 0.00 641.00 25.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.811906 0.811906) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 785.5,-28 785.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="212,-24 158,-24 158,-0 212,-0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="294,-24 230,-24 230,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="262" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="439.5,-24 384.5,-24 384.5,-0 439.5,-0 439.5,-24"/>
+<text text-anchor="middle" x="412" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="594,-24 458,-24 458,-0 594,-0 594,-24"/>
+<text text-anchor="middle" x="526" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="666,-24 612,-24 612,-0 666,-0 666,-24"/>
+<text text-anchor="middle" x="639" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="781.5,-24 684.5,-24 684.5,-0 781.5,-0 781.5,-24"/>
+<text text-anchor="middle" x="733" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    <br>
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+     <h2>Abstract Interfaces</h2>
+	 
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-assignment_integrand"></span><h3>abstract interface
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Abstract type bound procedures necessary for implementing a concrete extension of the class(integrand).</p>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+    
+    
+    <h3>
+private subroutine <a href='../interface/assignment_integrand.html'>assignment_integrand</a>(lhs, rhs)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Symmetric assignment integrand = integrand.</p>
+        
+
+    </li>
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-time_derivative"></span><h3>abstract interface
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Abstract type bound procedures necessary for implementing a concrete extension of the class(integrand).</p>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../interface/time_derivative.html'>time_derivative</a>(self, t) result(dState_dt)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Integrand field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>t</strong></td><td><p>Time.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Result of the time derivative function of integrand field.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Time derivative function of integrand class, i.e. the residuals function.</p>
+        
+
+    </li>
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-local_error_operator"></span><h3>abstract interface
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Abstract type bound procedures necessary for implementing a concrete extension of the class(integrand).</p>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../interface/local_error_operator.html'>local_error_operator</a>(lhs, rhs) result(error)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Error estimation.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Estimate local truncation error between 2 solution approximations.</p>
+        
+
+    </li>
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-integrand_op_real"></span><h3>abstract interface
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Abstract type bound procedures necessary for implementing a concrete extension of the class(integrand).</p>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../interface/integrand_op_real.html'>integrand_op_real</a>(lhs, rhs) result(operator_result)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Asymmetric type operator integrand.op.real.</p>
+        
+
+    </li>
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-real_op_integrand"></span><h3>abstract interface
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Abstract type bound procedures necessary for implementing a concrete extension of the class(integrand).</p>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../interface/real_op_integrand.html'>real_op_integrand</a>(lhs, rhs) result(operator_result)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Asymmetric type operator real.op.integrand.</p>
+        
+
+    </li>
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="interface-symmetric_operator"></span><h3>abstract interface
+    
+  </h3></div>
+  
+  <div class="panel-body">
+    
+
+
+    <p>Abstract type bound procedures necessary for implementing a concrete extension of the class(integrand).</p>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+    
+    
+    <h3>
+private function <a href='../interface/symmetric_operator.html'>symmetric_operator</a>(lhs, rhs) result(operator_result)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Symmetric type operator integrand.op.integrand.</p>
+        
+
+    </li>
+  </ul>
+</div>
+
+    
+    </section>
+	<br>
+    
+    
+    
+    <section>
+     <h2>Derived Types</h2>
+	 
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-integrand"></span><h3>type, public, abstract :: <a href='../type/integrand.html'>integrand</a>
+    
+  </h3></div>
+  <div class="panel-body">
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummy_to_allow_extensions"></span>class(*),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>dummy_to_allow_extensions</strong>[:]</td><td></td><td></td><td><p>Dummy member to allow concrete extensions with coarray members.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+     <h4>Type-Bound Procedures</h4>
+      <table class="table table-striped varlist">
+      <tbody>
+      
+       <tr><td>procedure(time_derivative), public, pass(self), deferred :: <strong>t</strong>  </td>
+       <td><p>Time derivative, residuals.</p></td></tr>
+      
+       <tr><td>procedure(local_error_operator), public, pass(lhs), deferred :: <strong>local_error</strong>  </td>
+       <td><p>||integrand - integrand||.</p></td></tr>
+      
+       <tr><td>procedure(symmetric_operator), public, pass(lhs), deferred :: <strong>integrand_multiply_integrand</strong>  </td>
+       <td><p>Integrand * integrand operator.</p></td></tr>
+      
+       <tr><td>procedure(integrand_op_real), public, pass(lhs), deferred :: <strong>integrand_multiply_real</strong>  </td>
+       <td><p>Integrand * real operator.</p></td></tr>
+      
+       <tr><td>procedure(real_op_integrand), public, pass(rhs), deferred :: <strong>real_multiply_integrand</strong>  </td>
+       <td><p>Real * integrand operator.</p></td></tr>
+      
+       <tr><td>procedure(symmetric_operator), public, pass(lhs), deferred :: <strong>add</strong>  </td>
+       <td><p>Integrand + integrand operator.</p></td></tr>
+      
+       <tr><td>procedure(symmetric_operator), public, pass(lhs), deferred :: <strong>sub</strong>  </td>
+       <td><p>Integrand - integrand operator.</p></td></tr>
+      
+       <tr><td>procedure(assignment_integrand), public, pass(lhs), deferred :: <strong>assign_integrand</strong>  </td>
+       <td><p>Integrand = integrand.</p></td></tr>
+      
+       <tr><td>generic, public :: <strong>operator(.lterror.)</strong>  => local_error </td>
+       <td><p>Estimate local truncation error.</p></td></tr>
+      
+       <tr><td>generic, public :: <strong>operator(+)</strong>  => add </td>
+       <td><p>Overloading + operator.</p></td></tr>
+      
+       <tr><td>generic, public :: <strong>operator(-)</strong>  => sub </td>
+       <td><p>Overloading - operator.</p></td></tr>
+      
+       <tr><td>generic, public :: <strong>operator(*)</strong>  => integrand_multiply_integrand, real_multiply_integrand, integrand_multiply_real </td>
+       <td><p>Overloading * operator.</p></td></tr>
+      
+       <tr><td>generic, public :: <strong>assignment(=)</strong>  => assign_integrand </td>
+       <td><p>Overloading = assignament.</p></td></tr>
+      
+       </tbody>
+       </table>
+     
+     
+     <h4>Description</h4>
+       
+       <p>Abstract type for building FOODIE ODE integrators.</p>
+     
+  </div>
+</div>
+
+     
+    </section>
+	<br>
+    
+    
+    
+
+    
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-6">&copy; 2015 Shu-Osher-shock-tube-problem was written by Stefano Zaghi. </div>
+        <div class="col-md-6"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a>.</span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

@@ -1,0 +1,3716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Regression-test results of Shu-Osher shock tube problem">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>type_euler_1D &ndash; Shu-Osher-shock-tube-problem</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Shu-Osher-shock-tube-problem </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/integrate_euler_1d.html">Program</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>type_euler_1D 
+    <small>Module</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/type_euler-1D.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/type_euler-1d.f90.html'>type_euler-1D.f90</a></li>
+  
+     <li class="active">type_euler_1D</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Derived Types</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#type-euler_1d">euler_1D</a>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Functions</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-output">output</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-compute_dt">compute_dt</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-deuler_dt">dEuler_dt</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-euler_local_error">euler_local_error</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-euler_multiply_euler">euler_multiply_euler</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-euler_multiply_real">euler_multiply_real</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-real_multiply_euler">real_multiply_euler</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-add_euler">add_euler</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-sub_euler">sub_euler</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-primitive2conservative">primitive2conservative</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-conservative2primitive">conservative2primitive</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-p">p</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-r">r</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-a">a</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-e">E</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-h">H</a>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Subroutines</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-init%7E2">init</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-destroy">destroy</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-euler_assign_euler">euler_assign_euler</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-euler_assign_real">euler_assign_real</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-impose_boundary_conditions">impose_boundary_conditions</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-reconstruct_interfaces_states">reconstruct_interfaces_states</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-riemann_solver">riemann_solver</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-finalize">finalize</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html#proc-compute_inter_states">compute_inter_states</a>
+      
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title">All Modules</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/data_type_command_line_interface.html">Data_Type_Command_Line_Interface</a>
+      
+      <a class="list-group-item" href="../module/foodie.html">foodie</a>
+      
+      <a class="list-group-item" href="../module/foodie_adt_integrand.html">foodie_adt_integrand</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_adams_bashforth.html">foodie_integrator_adams_bashforth</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_adams_bashforth_moulton.html">foodie_integrator_adams_bashforth_moulton</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_adams_moulton.html">foodie_integrator_adams_moulton</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_emd_runge_kutta.html">foodie_integrator_emd_runge_kutta</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_euler_explicit.html">foodie_integrator_euler_explicit</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_leapfrog.html">foodie_integrator_leapfrog</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_low_storage_runge_kutta.html">foodie_integrator_low_storage_runge_kutta</a>
+      
+      <a class="list-group-item" href="../module/foodie_integrator_tvd_runge_kutta.html">foodie_integrator_tvd_runge_kutta</a>
+      
+      <a class="list-group-item" href="../module/foodie_kinds.html">foodie_kinds</a>
+      
+      <a class="list-group-item" href="../module/pyplot_module.html">pyplot_module</a>
+      
+      <a class="list-group-item" href="../module/type_euler_1d.html">type_euler_1D</a>
+      
+      <a class="list-group-item" href="../module/type_weno_interpolator.html">type_weno_interpolator</a>
+      
+      <a class="list-group-item" href="../module/type_weno_interpolator_upwind.html">type_weno_interpolator_upwind</a>
+      
+      <a class="list-group-item" href="../module/wenoof.html">wenoof</a>
+      
+      <a class="list-group-item" href="../module/wenoof_kinds.html">wenoof_kinds</a>
+      
+    </div>
+  </div>
+  
+  
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    
+    
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li>IR_Precision</li>
+      
+      <li><a href='../module/foodie.html'>foodie</a></li>
+      
+      <li><a href='../module/wenoof.html'>wenoof</a></li>
+      
+    </ul>
+  
+
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: module~~type_euler_1d~~UsesGraph Pages: 1 -->
+<svg id="moduletype_euler_1dUsesGraph" width="641pt" height="277pt"
+ viewBox="0.00 0.00 641.00 277.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~type_euler_1d~~UsesGraph" class="graph" transform="scale(0.65609 0.65609) rotate(0) translate(4 418.653)">
+<title>module~~type_euler_1d~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-418.653 973,-418.653 973,4 -4,4"/>
+<!-- module~type_euler_1d -->
+<g id="module~~type_euler_1d~~UsesGraph_node1" class="node"><title>module~type_euler_1d</title>
+<polygon fill="none" stroke="black" points="969,-272 887,-272 887,-248 969,-248 969,-272"/>
+<text text-anchor="middle" x="928" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50">type_euler_1D</text>
+</g>
+<!-- IR_Precision -->
+<g id="module~~type_euler_1d~~UsesGraph_node2" class="node"><title>IR_Precision</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="851,-314 778,-314 778,-290 851,-290 851,-314"/>
+<text text-anchor="middle" x="814.5" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">IR_Precision</text>
+</g>
+<!-- IR_Precision&#45;&gt;module~type_euler_1d -->
+<g id="module~~type_euler_1d~~UsesGraph_edge35" class="edge"><title>IR_Precision&#45;&gt;module~type_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M847.451,-289.964C859.348,-285.483 873.025,-280.331 885.646,-275.577"/>
+<polygon fill="black" stroke="black" points="886.92,-278.838 895.044,-272.037 884.452,-272.287 886.92,-278.838"/>
+</g>
+<!-- module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_node3" class="node"><title>module~foodie</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node3"><a xlink:href="../module/foodie.html" xlink:title="foodie">
+<polygon fill="#337ab7" stroke="#337ab7" points="841.5,-272 787.5,-272 787.5,-248 841.5,-248 841.5,-272"/>
+<text text-anchor="middle" x="814.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie</text>
+</a>
+</g>
+</g>
+<!-- module~foodie&#45;&gt;module~type_euler_1d -->
+<g id="module~~type_euler_1d~~UsesGraph_edge36" class="edge"><title>module~foodie&#45;&gt;module~type_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M841.642,-260C852.101,-260 864.52,-260 876.6,-260"/>
+<polygon fill="black" stroke="black" points="876.618,-263.5 886.618,-260 876.618,-256.5 876.618,-263.5"/>
+</g>
+<!-- module~wenoof -->
+<g id="module~~type_euler_1d~~UsesGraph_node4" class="node"><title>module~wenoof</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node4"><a xlink:href="../module/wenoof.html" xlink:title="wenoof">
+<polygon fill="#337ab7" stroke="#337ab7" points="841.5,-64 787.5,-64 787.5,-40 841.5,-40 841.5,-64"/>
+<text text-anchor="middle" x="814.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wenoof</text>
+</a>
+</g>
+</g>
+<!-- module~wenoof&#45;&gt;module~type_euler_1d -->
+<g id="module~~type_euler_1d~~UsesGraph_edge37" class="edge"><title>module~wenoof&#45;&gt;module~type_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M821.977,-64.082C840.259,-98.1877 892.44,-195.529 915.641,-238.81"/>
+<polygon fill="black" stroke="black" points="912.696,-240.725 920.505,-247.885 918.866,-237.417 912.696,-240.725"/>
+</g>
+<!-- module~foodie_adt_integrand -->
+<g id="module~~type_euler_1d~~UsesGraph_node5" class="node"><title>module~foodie_adt_integrand</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node5"><a xlink:href="../module/foodie_adt_integrand.html" xlink:title="foodie_adt_integrand">
+<polygon fill="#337ab7" stroke="#337ab7" points="223,-252 109,-252 109,-228 223,-228 223,-252"/>
+<text text-anchor="middle" x="166" y="-237.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_adt_integrand</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge21" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M223.338,-238.843C263.645,-238.298 319.182,-238.122 368,-240"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M370,-240C484.36,-244.4 514.721,-220.546 627.5,-240"/>
+</g>
+<!-- module~foodie_integrator_leapfrog -->
+<g id="module~~type_euler_1d~~UsesGraph_node6" class="node"><title>module~foodie_integrator_leapfrog</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node6"><a xlink:href="../module/foodie_integrator_leapfrog.html" xlink:title="foodie_integrator_leapfrog">
+<polygon fill="#337ab7" stroke="#337ab7" points="438.5,-170 299.5,-170 299.5,-146 438.5,-146 438.5,-170"/>
+<text text-anchor="middle" x="369" y="-155.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_leapfrog</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_leapfrog -->
+<g id="module~~type_euler_1d~~UsesGraph_edge2" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_leapfrog</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M181.266,-227.898C198.528,-213.911 229.019,-191.251 259,-179 268.599,-175.078 278.977,-171.877 289.384,-169.267"/>
+<polygon fill="black" stroke="black" points="290.404,-172.623 299.346,-166.941 288.812,-165.806 290.404,-172.623"/>
+</g>
+<!-- module~foodie_integrator_euler_explicit -->
+<g id="module~~type_euler_1d~~UsesGraph_node7" class="node"><title>module~foodie_integrator_euler_explicit</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node7"><a xlink:href="../module/foodie_integrator_euler_explicit.html" xlink:title="foodie_integrator_euler_explicit">
+<polygon fill="#337ab7" stroke="#337ab7" points="450,-128 288,-128 288,-104 450,-104 450,-128"/>
+<text text-anchor="middle" x="369" y="-113.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_euler_explicit</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_euler_explicit -->
+<g id="module~~type_euler_1d~~UsesGraph_edge4" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_euler_explicit</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M177.109,-227.83C198.788,-201.86 248.625,-142.886 259,-137 264.969,-133.614 271.386,-130.763 278.012,-128.365"/>
+<polygon fill="black" stroke="black" points="279.415,-131.589 287.84,-125.165 277.248,-124.933 279.415,-131.589"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth -->
+<g id="module~~type_euler_1d~~UsesGraph_node8" class="node"><title>module~foodie_integrator_adams_bashforth</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node8"><a xlink:href="../module/foodie_integrator_adams_bashforth.html" xlink:title="foodie_integrator_adams_bashforth">
+<polygon fill="#337ab7" stroke="#337ab7" points="460.5,-372 277.5,-372 277.5,-348 460.5,-348 460.5,-372"/>
+<text text-anchor="middle" x="369" y="-357.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_adams_bashforth</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth -->
+<g id="module~~type_euler_1d~~UsesGraph_edge6" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M184.338,-252.169C202.613,-264.835 232.385,-285.017 259,-301 284.18,-316.122 313.498,-331.891 335.381,-343.319"/>
+<polygon fill="black" stroke="black" points="333.783,-346.433 344.271,-347.936 337.01,-340.221 333.783,-346.433"/>
+</g>
+<!-- module~foodie_integrator_tvd_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_node9" class="node"><title>module~foodie_integrator_tvd_runge_kutta</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node9"><a xlink:href="../module/foodie_integrator_tvd_runge_kutta.html" xlink:title="foodie_integrator_tvd_runge_kutta">
+<polygon fill="#337ab7" stroke="#337ab7" points="457.5,-86 280.5,-86 280.5,-62 457.5,-62 457.5,-86"/>
+<text text-anchor="middle" x="369" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_tvd_runge_kutta</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_tvd_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge8" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_tvd_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M178.756,-227.702C190.862,-214.616 209.774,-192.95 223,-172 243.167,-140.056 229.2,-118.219 259,-95 262.836,-92.0111 266.975,-89.4074 271.32,-87.142"/>
+<polygon fill="black" stroke="black" points="272.853,-90.2895 280.496,-82.9521 269.946,-83.9218 272.853,-90.2895"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_node10" class="node"><title>module~foodie_integrator_adams_bashforth_moulton</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node10"><a xlink:href="../module/foodie_integrator_adams_bashforth_moulton.html" xlink:title="foodie_integrator_adams_bashforth_moulton">
+<polygon fill="#337ab7" stroke="#337ab7" points="742,-292 515,-292 515,-268 742,-268 742,-292"/>
+<text text-anchor="middle" x="628.5" y="-277.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_adams_bashforth_moulton</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_edge11" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M370,-240C436.54,-242.56 511.687,-255.399 563.548,-265.851"/>
+<polygon fill="black" stroke="black" points="563.101,-269.332 573.6,-267.906 564.503,-262.474 563.101,-269.332"/>
+</g>
+<!-- module~foodie_integrator_low_storage_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_node11" class="node"><title>module~foodie_integrator_low_storage_runge_kutta</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node11"><a xlink:href="../module/foodie_integrator_low_storage_runge_kutta.html" xlink:title="foodie_integrator_low_storage_runge_kutta">
+<polygon fill="#337ab7" stroke="#337ab7" points="479,-414 259,-414 259,-390 479,-390 479,-414"/>
+<text text-anchor="middle" x="369" y="-399.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_low_storage_runge_kutta</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_low_storage_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge16" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_low_storage_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M179.198,-252.374C191.31,-265.092 209.913,-285.83 223,-306 243.126,-337.017 229.718,-358.424 259,-381 260.829,-382.41 262.726,-383.734 264.68,-384.978"/>
+<polygon fill="black" stroke="black" points="263.141,-388.126 273.582,-389.924 266.541,-382.008 263.141,-388.126"/>
+</g>
+<!-- module~foodie_integrator_emd_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_node12" class="node"><title>module~foodie_integrator_emd_runge_kutta</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node12"><a xlink:href="../module/foodie_integrator_emd_runge_kutta.html" xlink:title="foodie_integrator_emd_runge_kutta">
+<polygon fill="#337ab7" stroke="#337ab7" points="461,-212 277,-212 277,-188 461,-188 461,-212"/>
+<text text-anchor="middle" x="369" y="-197.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_emd_runge_kutta</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_emd_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge17" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_emd_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M223.257,-228.805C246.326,-224.214 273.281,-218.85 297.634,-214.003"/>
+<polygon fill="black" stroke="black" points="298.41,-217.417 307.535,-212.033 297.044,-210.552 298.41,-217.417"/>
+</g>
+<!-- module~foodie_integrator_adams_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_node13" class="node"><title>module~foodie_integrator_adams_moulton</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node13"><a xlink:href="../module/foodie_integrator_adams_moulton.html" xlink:title="foodie_integrator_adams_moulton">
+<polygon fill="#337ab7" stroke="#337ab7" points="457,-292 281,-292 281,-268 457,-268 457,-292"/>
+<text text-anchor="middle" x="369" y="-277.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_integrator_adams_moulton</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_edge19" class="edge"><title>module~foodie_adt_integrand&#45;&gt;module~foodie_integrator_adams_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M223.257,-251.195C246.326,-255.786 273.281,-261.15 297.634,-265.997"/>
+<polygon fill="black" stroke="black" points="297.044,-269.448 307.535,-267.967 298.41,-262.583 297.044,-269.448"/>
+</g>
+<!-- module~foodie_integrator_leapfrog&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge22" class="edge"><title>module~foodie_integrator_leapfrog&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M438.536,-169.038C452.066,-171.824 466.073,-175.142 479,-179 547.371,-199.406 557.187,-227.871 627.5,-240"/>
+</g>
+<!-- module~foodie_integrator_euler_explicit&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge23" class="edge"><title>module~foodie_integrator_euler_explicit&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M450.029,-127.422C459.974,-129.999 469.852,-133.15 479,-137 553.032,-168.158 548.347,-226.346 627.5,-240"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge24" class="edge"><title>module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M444.292,-372.023C507.931,-381.228 594.389,-390.822 627.5,-381"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M629.5,-381C705.784,-358.371 710.729,-323.496 778,-281 779.918,-279.788 781.906,-278.555 783.916,-277.323"/>
+<polygon fill="black" stroke="black" points="785.969,-280.172 792.727,-272.013 782.356,-274.177 785.969,-280.172"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_edge13" class="edge"><title>module~foodie_integrator_adams_bashforth&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M425.779,-347.992C442.958,-343.948 461.857,-339.143 479,-334 516.417,-322.774 558.157,-307.329 587.832,-295.831"/>
+<polygon fill="black" stroke="black" points="589.365,-298.99 597.41,-292.095 586.821,-292.469 589.365,-298.99"/>
+</g>
+<!-- module~foodie_integrator_tvd_runge_kutta&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge25" class="edge"><title>module~foodie_integrator_tvd_runge_kutta&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M457.543,-86.0845C464.996,-88.5327 472.255,-91.472 479,-95 560.739,-137.752 536.598,-224.319 627.5,-240"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M629.5,-240C680.367,-248.775 739.849,-254.412 777.103,-257.395"/>
+<polygon fill="black" stroke="black" points="777.215,-260.914 787.456,-258.201 777.758,-253.935 777.215,-260.914"/>
+</g>
+<!-- module~foodie_integrator_adams_bashforth_moulton&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge26" class="edge"><title>module~foodie_integrator_adams_bashforth_moulton&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M739.985,-267.991C753.404,-266.532 766.275,-265.133 777.393,-263.925"/>
+<polygon fill="black" stroke="black" points="777.913,-267.389 787.476,-262.829 777.156,-260.43 777.913,-267.389"/>
+</g>
+<!-- module~foodie_integrator_low_storage_runge_kutta&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge27" class="edge"><title>module~foodie_integrator_low_storage_runge_kutta&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M479.258,-403.006C525.758,-400.909 580.091,-395.064 627.5,-381"/>
+</g>
+<!-- module~foodie_integrator_emd_runge_kutta&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge28" class="edge"><title>module~foodie_integrator_emd_runge_kutta&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M451.873,-212.004C502.533,-219.609 568.874,-229.887 627.5,-240"/>
+</g>
+<!-- module~foodie_integrator_adams_moulton&#45;&gt;module~foodie -->
+<g id="module~~type_euler_1d~~UsesGraph_edge29" class="edge"><title>module~foodie_integrator_adams_moulton&#45;&gt;module~foodie</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M421.766,-267.954C485.199,-253.894 588.992,-233.357 627.5,-240"/>
+</g>
+<!-- module~foodie_integrator_adams_moulton&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_edge10" class="edge"><title>module~foodie_integrator_adams_moulton&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M457.178,-280C472.378,-280 488.444,-280 504.395,-280"/>
+<polygon fill="black" stroke="black" points="504.849,-283.5 514.849,-280 504.849,-276.5 504.849,-283.5"/>
+</g>
+<!-- module~foodie_kinds -->
+<g id="module~~type_euler_1d~~UsesGraph_node14" class="node"><title>module~foodie_kinds</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node14"><a xlink:href="../module/foodie_kinds.html" xlink:title="foodie_kinds">
+<polygon fill="#337ab7" stroke="#337ab7" points="73,-292 0,-292 0,-268 73,-268 73,-292"/>
+<text text-anchor="middle" x="36.5" y="-277.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">foodie_kinds</text>
+</a>
+</g>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_adt_integrand -->
+<g id="module~~type_euler_1d~~UsesGraph_edge1" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_adt_integrand</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M73.0159,-268.858C86.5461,-264.613 102.203,-259.701 116.72,-255.147"/>
+<polygon fill="black" stroke="black" points="118.055,-258.396 126.549,-252.063 115.959,-251.717 118.055,-258.396"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_leapfrog -->
+<g id="module~~type_euler_1d~~UsesGraph_edge3" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_leapfrog</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-158C209.12,-138.717 261.606,-139.432 302.381,-144.591"/>
+<polygon fill="black" stroke="black" points="302.096,-148.085 312.481,-145.989 303.056,-141.151 302.096,-148.085"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_euler_explicit -->
+<g id="module~~type_euler_1d~~UsesGraph_edge5" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_euler_explicit</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-158C201.517,-142.198 242.097,-132.274 277.724,-126.074"/>
+<polygon fill="black" stroke="black" points="278.344,-129.519 287.632,-124.422 277.192,-122.614 278.344,-129.519"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_adams_bashforth -->
+<g id="module~~type_euler_1d~~UsesGraph_edge7" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_adams_bashforth</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-320C213.281,-326.985 265.073,-337.353 304.491,-345.784"/>
+<polygon fill="black" stroke="black" points="303.979,-349.254 314.492,-347.938 305.453,-342.411 303.979,-349.254"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_tvd_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge9" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_tvd_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M45.675,-267.939C63.7367,-242.423 109.845,-183.251 165,-158"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-158C212.059,-137.371 213.266,-114.088 259,-95 264.469,-92.7175 270.197,-90.6804 276.042,-88.8626"/>
+<polygon fill="black" stroke="black" points="277.324,-92.1356 285.966,-86.0058 275.388,-85.4088 277.324,-92.1356"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_adams_bashforth_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_edge12" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_adams_bashforth_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-320C309.879,-341.564 479.584,-313.004 567.694,-294.164"/>
+<polygon fill="black" stroke="black" points="568.481,-297.574 577.511,-292.032 566.996,-290.734 568.481,-297.574"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_low_storage_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge15" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_low_storage_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M41.8658,-292.209C50.6317,-314.704 72.7008,-362.283 109,-383 155.525,-409.553 214.654,-415.551 264.666,-414.354"/>
+<polygon fill="black" stroke="black" points="264.989,-417.845 274.865,-414.009 264.752,-410.85 264.989,-417.845"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_emd_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge18" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_emd_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-158C205.134,-140.542 217.958,-170.365 259,-179 270.158,-181.348 281.981,-183.732 293.566,-186.01"/>
+<polygon fill="black" stroke="black" points="293.176,-189.5 303.662,-187.982 294.518,-182.63 293.176,-189.5"/>
+</g>
+<!-- module~foodie_kinds&#45;&gt;module~foodie_integrator_adams_moulton -->
+<g id="module~~type_euler_1d~~UsesGraph_edge20" class="edge"><title>module~foodie_kinds&#45;&gt;module~foodie_integrator_adams_moulton</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M66.7708,-292.029C92.2264,-301.795 130.362,-314.772 165,-320"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M167,-320C180.786,-322.081 253.043,-306.618 307.001,-294.315"/>
+<polygon fill="black" stroke="black" points="307.88,-297.704 316.845,-292.059 306.316,-290.881 307.88,-297.704"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~type_euler_1d~~UsesGraph_node15" class="node"><title>iso_fortran_env</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node15"><a xlink:href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="209.5,-374 122.5,-374 122.5,-350 209.5,-350 209.5,-374"/>
+<text text-anchor="middle" x="166" y="-359.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- iso_fortran_env&#45;&gt;module~foodie_integrator_low_storage_runge_kutta -->
+<g id="module~~type_euler_1d~~UsesGraph_edge14" class="edge"><title>iso_fortran_env&#45;&gt;module~foodie_integrator_low_storage_runge_kutta</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M209.573,-370.916C225.119,-374.138 242.846,-377.776 259,-381 270.59,-383.313 282.883,-385.723 294.876,-388.051"/>
+<polygon fill="black" stroke="black" points="294.375,-391.519 304.858,-389.983 295.706,-384.647 294.375,-391.519"/>
+</g>
+<!-- module~type_weno_interpolator_upwind -->
+<g id="module~~type_euler_1d~~UsesGraph_node16" class="node"><title>module~type_weno_interpolator_upwind</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node16"><a xlink:href="../module/type_weno_interpolator_upwind.html" xlink:title="type_weno_interpolator_upwind">
+<polygon fill="#337ab7" stroke="#337ab7" points="710.5,-24 546.5,-24 546.5,-0 710.5,-0 710.5,-24"/>
+<text text-anchor="middle" x="628.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">type_weno_interpolator_upwind</text>
+</a>
+</g>
+</g>
+<!-- module~type_weno_interpolator_upwind&#45;&gt;module~wenoof -->
+<g id="module~~type_euler_1d~~UsesGraph_edge33" class="edge"><title>module~type_weno_interpolator_upwind&#45;&gt;module~wenoof</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M684.706,-24.0013C714.61,-30.5023 750.724,-38.3531 777.092,-44.0852"/>
+<polygon fill="black" stroke="black" points="776.524,-47.5434 787.039,-46.2477 778.011,-40.7032 776.524,-47.5434"/>
+</g>
+<!-- module~type_weno_interpolator -->
+<g id="module~~type_euler_1d~~UsesGraph_node17" class="node"><title>module~type_weno_interpolator</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node17"><a xlink:href="../module/type_weno_interpolator.html" xlink:title="type_weno_interpolator">
+<polygon fill="#337ab7" stroke="#337ab7" points="431,-44 307,-44 307,-20 431,-20 431,-44"/>
+<text text-anchor="middle" x="369" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">type_weno_interpolator</text>
+</a>
+</g>
+</g>
+<!-- module~type_weno_interpolator&#45;&gt;module~wenoof -->
+<g id="module~~type_euler_1d~~UsesGraph_edge34" class="edge"><title>module~type_weno_interpolator&#45;&gt;module~wenoof</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M431.201,-34.7599C525.045,-38.9919 701.571,-46.9525 777.395,-50.3718"/>
+<polygon fill="black" stroke="black" points="777.259,-53.8691 787.406,-50.8233 777.574,-46.8762 777.259,-53.8691"/>
+</g>
+<!-- module~type_weno_interpolator&#45;&gt;module~type_weno_interpolator_upwind -->
+<g id="module~~type_euler_1d~~UsesGraph_edge31" class="edge"><title>module~type_weno_interpolator&#45;&gt;module~type_weno_interpolator_upwind</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M431.024,-27.2603C462.428,-24.8211 501.347,-21.7983 536.24,-19.0881"/>
+<polygon fill="black" stroke="black" points="536.746,-22.5595 546.445,-18.2955 536.204,-15.5805 536.746,-22.5595"/>
+</g>
+<!-- module~wenoof_kinds -->
+<g id="module~~type_euler_1d~~UsesGraph_node18" class="node"><title>module~wenoof_kinds</title>
+<g id="a_module~~type_euler_1d~~UsesGraph_node18"><a xlink:href="../module/wenoof_kinds.html" xlink:title="wenoof_kinds">
+<polygon fill="#337ab7" stroke="#337ab7" points="205,-24 127,-24 127,-0 205,-0 205,-24"/>
+<text text-anchor="middle" x="166" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">wenoof_kinds</text>
+</a>
+</g>
+</g>
+<!-- module~wenoof_kinds&#45;&gt;module~type_weno_interpolator_upwind -->
+<g id="module~~type_euler_1d~~UsesGraph_edge30" class="edge"><title>module~wenoof_kinds&#45;&gt;module~type_weno_interpolator_upwind</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M205.046,-11.4937C221.619,-11.2972 241.27,-11.0964 259,-11 356.776,-10.4686 381.223,-10.6708 479,-11 497.467,-11.0622 517.225,-11.1678 536.106,-11.2878"/>
+<polygon fill="black" stroke="black" points="536.166,-14.7882 546.189,-11.3537 536.212,-7.78832 536.166,-14.7882"/>
+</g>
+<!-- module~wenoof_kinds&#45;&gt;module~type_weno_interpolator -->
+<g id="module~~type_euler_1d~~UsesGraph_edge32" class="edge"><title>module~wenoof_kinds&#45;&gt;module~type_weno_interpolator</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M205.28,-15.8089C231.068,-18.3749 265.868,-21.8376 296.666,-24.9021"/>
+<polygon fill="black" stroke="black" points="296.641,-28.4168 306.939,-25.9243 297.334,-21.4512 296.641,-28.4168"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmoduletype_euler_1dUsesGraph = svgPanZoom('#moduletype_euler_1dUsesGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="26pt"
+ viewBox="0.00 0.00 641.00 25.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.811906 0.811906) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 785.5,-28 785.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="212,-24 158,-24 158,-0 212,-0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="294,-24 230,-24 230,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="262" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="439.5,-24 384.5,-24 384.5,-0 439.5,-0 439.5,-24"/>
+<text text-anchor="middle" x="412" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="594,-24 458,-24 458,-0 594,-0 594,-24"/>
+<text text-anchor="middle" x="526" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="666,-24 612,-24 612,-0 666,-0 666,-24"/>
+<text text-anchor="middle" x="639" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="781.5,-24 684.5,-24 684.5,-0 781.5,-0 781.5,-24"/>
+<text text-anchor="middle" x="733" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    
+    <p>Define Euler 1D field that is a concrete extension of the abstract integrand type.</p>
+    
+    
+    <h3>Used By</h3>
+    
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: module~~type_euler_1d~~UsedByGraph Pages: 1 -->
+<svg id="moduletype_euler_1dUsedByGraph" width="230pt" height="32pt"
+ viewBox="0.00 0.00 230.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~type_euler_1d~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~type_euler_1d~~UsedByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 226,-28 226,4 -4,4"/>
+<!-- module~type_euler_1d -->
+<g id="module~~type_euler_1d~~UsedByGraph_node1" class="node"><title>module~type_euler_1d</title>
+<polygon fill="none" stroke="black" points="82,-24 0,-24 0,-0 82,-0 82,-24"/>
+<text text-anchor="middle" x="41" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">type_euler_1D</text>
+</g>
+<!-- program~integrate_euler_1d -->
+<g id="module~~type_euler_1d~~UsedByGraph_node2" class="node"><title>program~integrate_euler_1d</title>
+<g id="a_module~~type_euler_1d~~UsedByGraph_node2"><a xlink:href="../program/integrate_euler_1d.html" xlink:title="integrate_euler_1D">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="222,-24 118,-24 118,-0 222,-0 222,-24"/>
+<text text-anchor="middle" x="170" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">integrate_euler_1D</text>
+</a>
+</g>
+</g>
+<!-- module~type_euler_1d&#45;&gt;program~integrate_euler_1d -->
+<g id="module~~type_euler_1d~~UsedByGraph_edge1" class="edge"><title>module~type_euler_1d&#45;&gt;program~integrate_euler_1d</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M82.1836,-12C90.3317,-12 99.0746,-12 107.761,-12"/>
+<polygon fill="black" stroke="black" points="107.893,-15.5001 117.893,-12 107.893,-8.5001 107.893,-15.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="26pt"
+ viewBox="0.00 0.00 641.00 25.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.811906 0.811906) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 785.5,-28 785.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="212,-24 158,-24 158,-0 212,-0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="294,-24 230,-24 230,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="262" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="439.5,-24 384.5,-24 384.5,-0 439.5,-0 439.5,-24"/>
+<text text-anchor="middle" x="412" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="594,-24 458,-24 458,-0 594,-0 594,-24"/>
+<text text-anchor="middle" x="526" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="666,-24 612,-24 612,-0 666,-0 666,-24"/>
+<text text-anchor="middle" x="639" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="781.5,-24 684.5,-24 684.5,-0 781.5,-0 781.5,-24"/>
+<text text-anchor="middle" x="733" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+    <br>
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <section>
+     <h2>Derived Types</h2>
+	 
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-euler_1d"></span><h3>type, public, extends(integrand) :: <a href='../type/euler_1d.html'>euler_1D</a>
+    
+  </h3></div>
+  <div class="panel-body">
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ord"></span>integer(kind=I_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>ord</strong></td><td> =</td><td>0</td><td><p>Space accuracy formal order.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ni"></span>integer(kind=I_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>Ni</strong></td><td> =</td><td>0</td><td><p>Space dimension.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ng"></span>integer(kind=I_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>Ng</strong></td><td> =</td><td>0</td><td><p>Number of ghost cells for boundary conditions handling.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ns"></span>integer(kind=I_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>Ns</strong></td><td> =</td><td>0</td><td><p>Number of initial species.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nc"></span>integer(kind=I_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>Nc</strong></td><td> =</td><td>0</td><td><p>Number of conservative variables, Ns+2.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np"></span>integer(kind=I_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>Np</strong></td><td> =</td><td>0</td><td><p>Number of primitive variables, Ns+4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dx"></span>real(kind=R_P),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>Dx</strong></td><td> =</td><td>0._R_P</td><td><p>Space step.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-weno"></span>type(<a href='../type/weno_interpolator_upwind.html'>weno_interpolator_upwind</a>),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>weno</strong></td><td></td><td></td><td><p>WENO interpolator.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u"></span>real(kind=R_P),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>U</strong>(:,:)</td><td></td><td></td><td><p>Integrand (state) variables, whole physical domain [1:Nc,1:Ni].</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cp0"></span>real(kind=R_P),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>cp0</strong>(:)</td><td></td><td></td><td><p>Specific heat cp of initial species [1:Ns].</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cv0"></span>real(kind=R_P),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>cv0</strong>(:)</td><td></td><td></td><td><p>Specific heat cv of initial species [1:Ns].</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bc_l"></span>character(len=:),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>BC_L</strong></td><td></td><td></td><td><p>Left boundary condition type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bc_r"></span>character(len=:),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>BC_R</strong></td><td></td><td></td><td><p>Right boundary condition type.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+     
+     <h4>Finalizations Procedures</h4>
+      <table class="table table-striped varlist">
+      <tbody>
+      
+       <tr><td>final :: <strong>finalize</strong></h3></td><td><p>Destroy field.</p></td></tr>
+      
+       </tbody>
+       </table>  
+          
+     
+     <h4>Type-Bound Procedures</h4>
+      <table class="table table-striped varlist">
+      <tbody>
+      
+       <tr><td>procedure, public, pass(self) :: <strong>init</strong>  </td>
+       <td><p>Init field.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong>destroy</strong>  </td>
+       <td><p>Destroy field.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong>output</strong>  </td>
+       <td><p>Extract Euler field.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong>dt</strong>  => compute_dt </td>
+       <td><p>Compute the current time step, by means of CFL condition.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong>t</strong>  => dEuler_dt </td>
+       <td><p>Time derivative, residuals function.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>local_error</strong>  => euler_local_error </td>
+       <td><p>||euler-euler||.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>integrand_multiply_integrand</strong>  => euler_multiply_euler </td>
+       <td><p>Euler * Euler operator.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>integrand_multiply_real</strong>  => euler_multiply_real </td>
+       <td><p>Euler * real operator.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(rhs) :: <strong>real_multiply_integrand</strong>  => real_multiply_euler </td>
+       <td><p>Real * Euler operator.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>add</strong>  => add_euler </td>
+       <td><p>Euler + Euler operator.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>sub</strong>  => sub_euler </td>
+       <td><p>Euler - Euler.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>assign_integrand</strong>  => euler_assign_euler </td>
+       <td><p>Euler = Euler.</p></td></tr>
+      
+       <tr><td>procedure, public, pass(lhs) :: <strong>assign_real</strong>  => euler_assign_real </td>
+       <td><p>Euler = real.</p></td></tr>
+      
+       <tr><td>procedure, private, pass(self) :: <strong>primitive2conservative</strong>  </td>
+       <td><p>Convert primitive variables to conservative ones.</p></td></tr>
+      
+       <tr><td>procedure, private, pass(self) :: <strong>conservative2primitive</strong>  </td>
+       <td><p>Convert conservative variables to primitive ones.</p></td></tr>
+      
+       <tr><td>procedure, private, pass(self) :: <strong>impose_boundary_conditions</strong>  </td>
+       <td><p>Impose boundary conditions.</p></td></tr>
+      
+       <tr><td>procedure, private, pass(self) :: <strong>reconstruct_interfaces_states</strong>  </td>
+       <td><p>Reconstruct interfaces states.</p></td></tr>
+      
+       <tr><td>procedure, private, pass(self) :: <strong>riemann_solver</strong>  </td>
+       <td><p>Solve the Riemann Problem at cell interfaces.</p></td></tr>
+      
+       </tbody>
+       </table>
+     
+     
+     <h4>Description</h4>
+       
+       <p>Euler 1D PDEs system field.</p>
+     
+  </div>
+</div>
+
+     
+    </section>
+	<br>
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-output"></span><h3>
+private purefunction <a href='../proc/output.html'>output</a>(self) result(state)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P),
+  dimension(:,:),allocatable</small></h4>
+  <p>Euler state vector.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Output the Euler field state (primitive variables).</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-compute_dt"></span><h3>
+private purefunction <a href='../proc/compute_dt.html'>compute_dt</a>(self, Nmax, Tmax, t, CFL) result(Dt)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Nmax</strong></td><td><p>Maximun number of iterates.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Tmax</strong></td><td><p>Maximum time (ignored if Nmax&gt;0).</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>t</strong></td><td><p>Time.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>CFL</strong></td><td><p>CFL value.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Time step.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute the current time step by means of CFL condition.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-deuler_dt"></span><h3>
+private function <a href='../proc/deuler_dt.html'>dEuler_dt</a>(self, t) result(dState_dt)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>t</strong></td><td><p>Time.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Euler field time derivative.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Time derivative of Euler field, the residuals function.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-euler_local_error"></span><h3>
+private function <a href='../proc/euler_local_error.html'>euler_local_error</a>(lhs, rhs) result(error)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Error estimation.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Estimate local truncation error between 2 euler approximations.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-euler_multiply_euler"></span><h3>
+private function <a href='../proc/euler_multiply_euler.html'>euler_multiply_euler</a>(lhs, rhs) result(opr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Multiply an Euler field by another one.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-euler_multiply_real"></span><h3>
+private function <a href='../proc/euler_multiply_real.html'>euler_multiply_real</a>(lhs, rhs) result(opr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Multiply an Euler field by a real scalar.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-real_multiply_euler"></span><h3>
+private function <a href='../proc/real_multiply_euler.html'>real_multiply_euler</a>(lhs, rhs) result(opr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Multiply a real scalar by an Euler field.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-add_euler"></span><h3>
+private function <a href='../proc/add_euler.html'>add_euler</a>(lhs, rhs) result(opr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Add two Euler fields.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sub_euler"></span><h3>
+private function <a href='../proc/sub_euler.html'>sub_euler</a>(lhs, rhs) result(opr)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>class(<a href='../type/integrand.html'>integrand</a>),
+  allocatable</small></h4>
+  <p>Operator result.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Subtract two Euler fields.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-primitive2conservative"></span><h3>
+private purefunction <a href='../proc/primitive2conservative.html'>primitive2conservative</a>(self, primitive) result(conservative)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>primitive</strong>(:)</td><td><p>Primitive variables.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  (1:self%Nc)</small></h4>
+  <p>Conservative variables.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert primitive variables to conservative variables.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-conservative2primitive"></span><h3>
+private purefunction <a href='../proc/conservative2primitive.html'>conservative2primitive</a>(self, conservative) result(primitive)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>conservative</strong>(:)</td><td><p>Conservative variables.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  (1:self%Np)</small></h4>
+  <p>Primitive variables.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Convert conservative variables to primitive variables.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-p"></span><h3>
+private elementalfunction <a href='../proc/p.html'>p</a>(r, a, g) result(pressure)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td><p>Density.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>a</strong></td><td><p>Speed of sound.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g</strong></td><td><p>Specific heats ratio \(\frac{{c_p}}{{c_v}}\).</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Pressure.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute the pressure for an ideal calorically perfect gas.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-r"></span><h3>
+private elementalfunction <a href='../proc/r.html'>r</a>(p, a, g) result(density)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td><p>Pressure.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>a</strong></td><td><p>Speed of sound.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g</strong></td><td><p>Specific heats ratio \(\frac{{c_p}}{{c_v}}\).</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Density.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute the density for an ideal calorically perfect gas.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-a"></span><h3>
+private elementalfunction <a href='../proc/a.html'>a</a>(p, r, g) result(ss)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td><p>Pressure.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td><p>Density.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g</strong></td><td><p>Specific heats ratio \(\frac{{c_p}}{{c_v}}\).</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Speed of sound.</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute the speed of sound for an ideal calorically perfect gas.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-e"></span><h3>
+private elementalfunction <a href='../proc/e.html'>E</a>(p, r, u, g) result(energy)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td><p>Pressure.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td><p>Density.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>u</strong></td><td><p>Module of velocity vector.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g</strong></td><td><p>Specific heats ratio \(\frac{{c_p}}{{c_v}}\).</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Total specific energy (per unit of mass).</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute total specific energy (per unit of mass).
+$$
+  E = \frac{p}{{\left( {\g  - 1} \right)\r }} + \frac{{u^2 }}{2}
+$$</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-h"></span><h3>
+private elementalfunction <a href='../proc/h.html'>H</a>(p, r, u, g) result(entalpy)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td><p>Pressure.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td><p>Density.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>u</strong></td><td><p>Module of velocity vector.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g</strong></td><td><p>Specific heats ratio \(\frac{{c_p}}{{c_v}}\).</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=R_P)
+  </small></h4>
+  <p>Total specific entalpy (per unit of mass).</p>
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute total specific entalpy (per unit of mass).
+$$
+  H = \frac{{\g p}}{{\left( {\g  - 1} \right)\r }} + \frac{{u^2 }}{2}
+$$</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-init%7E2"></span><h3>
+private subroutine <a href='../proc/init%7E2.html'>init</a>(self, Ni, Ns, Dx, BC_L, BC_R, initial_state, cp0, cv0, ord)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Ni</strong></td><td><p>Space dimension.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Ns</strong></td><td><p>Number of initial species.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Dx</strong></td><td><p>Space step.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>BC_L</strong></td><td><p>Left boundary condition type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>BC_R</strong></td><td><p>Right boundary condition type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>initial_state</strong>(:,:)</td><td><p>Initial state of primitive variables.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cp0</strong>(:)</td><td><p>Initial specific heat, constant pressure.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cv0</strong>(:)</td><td><p>Initial specific heat, constant volume.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=I_P),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>ord</strong></td><td><p>Space accuracy formal order.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Init field.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-destroy"></span><h3>
+private puresubroutine <a href='../proc/destroy.html'>destroy</a>(self)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Destroy field.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-euler_assign_euler"></span><h3>
+private subroutine <a href='../proc/euler_assign_euler.html'>euler_assign_euler</a>(lhs, rhs)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/integrand.html'>integrand</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Assign one Euler field to another.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-euler_assign_real"></span><h3>
+private subroutine <a href='../proc/euler_assign_real.html'>euler_assign_real</a>(lhs, rhs)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lhs</strong></td><td><p>Left hand side.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rhs</strong></td><td><p>Right hand side.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Assign one real to an Euler field.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-impose_boundary_conditions"></span><h3>
+private puresubroutine <a href='../proc/impose_boundary_conditions.html'>impose_boundary_conditions</a>(self, primitive)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>primitive</strong>(1:self%Np,1-self%Ng:self%Ni+self%Ng)</td><td><p>Primitive variables [1:Np,1-Ng:Ni+Ng].</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Impose boundary conditions.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-reconstruct_interfaces_states"></span><h3>
+private subroutine <a href='../proc/reconstruct_interfaces_states.html'>reconstruct_interfaces_states</a>(self, primitive, r_primitive)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>primitive</strong>(1:self%Np,1-self%Ng:self%Ni+self%Ng)</td><td><p>Primitive variables.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r_primitive</strong>(1:self%Np,1:2,0:self%Ni+1)</td><td><p>Reconstructed primitive variables.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Reconstruct the interfaces states (into primitive variables formulation) by the requested order of accuracy.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-riemann_solver"></span><h3>
+private puresubroutine <a href='../proc/riemann_solver.html'>riemann_solver</a>(self, p1, r1, u1, g1, p4, r4, u4, g4, F)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p1</strong></td><td><p>Pressure of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r1</strong></td><td><p>Density of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>u1</strong></td><td><p>Velocity of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g1</strong></td><td><p>Specific heats ratio of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p4</strong></td><td><p>Pressure of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r4</strong></td><td><p>Density of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>u4</strong></td><td><p>Velocity of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g4</strong></td><td><p>Specific heats ratio of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>F</strong>(1:self%Nc)</td><td><p>Resulting fluxes.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Solve the Riemann problem between the state $1$ and $4$ using the (local) Lax Friedrichs (Rusanov) solver.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-finalize"></span><h3>
+private subroutine <a href='../proc/finalize.html'>finalize</a>(self)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/euler_1d.html'>euler_1D</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td><p>Euler field.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Destroy field.</p>
+        
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-compute_inter_states"></span><h3>
+private puresubroutine <a href='../proc/compute_inter_states.html'>compute_inter_states</a>(r1, p1, u1, g1, r4, p4, u4, g4, p, S, S1, S4)
+    
+    
+    
+</h3></div>
+  <div class="panel-body">
+       
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r1</strong></td><td><p>Density of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p1</strong></td><td><p>Pressure of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>u1</strong></td><td><p>Velocity of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g1</strong></td><td><p>Specific heat ratio of state 1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r4</strong></td><td><p>Density of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p4</strong></td><td><p>Pressure of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>u4</strong></td><td><p>Velocity of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>g4</strong></td><td><p>Specific heat ratio of state 4.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td><p>Pressure of the intermediate states.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>Contact discontinuity signal velocity.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S1</strong></td><td><p>Left fastest signal velocity.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=R_P),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S4</strong></td><td><p>Right fastest signal velocity.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>Compute inter states (23*-states) from state1 and state4.</p>
+        
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-6">&copy; 2015 Shu-Osher-shock-tube-problem was written by Stefano Zaghi. </div>
+        <div class="col-md-6"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a>.</span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

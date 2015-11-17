@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Regression-test results of Shu-Osher shock tube problem">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>init &ndash; Shu-Osher-shock-tube-problem</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Shu-Osher-shock-tube-problem </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/integrate_euler_1d.html">Program</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>init
+    <small>Subroutine</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/euler-1D.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/euler-1d.f90.html'>euler-1D.f90</a></li>
+  
+     <li><a href='../program/integrate_euler_1d.html'>integrate_euler_1D</a></li>
+  
+     <li class="active">init</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Variables</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/init.html#variable-pi">pi</a>
+      
+      <a class="list-group-item" href="../proc/init.html#variable-i">i</a>
+      
+      <a class="list-group-item" href="../proc/init.html#variable-rho_sin">rho_sin</a>
+      
+      <a class="list-group-item" href="../proc/init.html#variable-dx%7E2">Dx</a>
+      
+      <a class="list-group-item" href="../proc/init.html#variable-cp0%7E2">cp0</a>
+      
+      <a class="list-group-item" href="../proc/init.html#variable-cv0%7E2">cv0</a>
+      
+      <a class="list-group-item" href="../proc/init.html#variable-initial_state">initial_state</a>
+      
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+    <div class="list-group">
+      <a class="list-group-item" href="../proc/init.html#src">init</a>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title">All Procedures</h3></div>
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/a.html">a</a>
+      
+      <a class="list-group-item" href="../proc/add.html">add</a>
+      
+      <a class="list-group-item" href="../proc/add_3d_plot.html">add_3d_plot</a>
+      
+      <a class="list-group-item" href="../proc/add_bar.html">add_bar</a>
+      
+      <a class="list-group-item" href="../proc/add_cla_clasg.html">add_cla_clasg</a>
+      
+      <a class="list-group-item" href="../proc/add_euler.html">add_euler</a>
+      
+      <a class="list-group-item" href="../proc/add_group.html">add_group</a>
+      
+      <a class="list-group-item" href="../proc/add_plot.html">add_plot</a>
+      
+      <a class="list-group-item" href="../proc/add_str.html">add_str</a>
+      
+      <a class="list-group-item" href="../proc/assign_cla.html">assign_cla</a>
+      
+      <a class="list-group-item" href="../proc/assign_clasg.html">assign_clasg</a>
+      
+      <a class="list-group-item" href="../proc/assign_cli.html">assign_cli</a>
+      
+      <a class="list-group-item" href="../proc/assign_interpolator.html">assign_interpolator</a>
+      
+      <a class="list-group-item" href="../proc/assign_object.html">assign_object</a>
+      
+      <a class="list-group-item" href="../proc/called_group.html">called_group</a>
+      
+      <a class="list-group-item" href="../proc/check.html">check</a>
+      
+      <a class="list-group-item" href="../proc/check_choices_cla.html">check_choices_cla</a>
+      
+      <a class="list-group-item" href="../proc/check_cla.html">check_cla</a>
+      
+      <a class="list-group-item" href="../proc/check_clasg.html">check_clasg</a>
+      
+      <a class="list-group-item" href="../proc/check_list_size_cla.html">check_list_size_cla</a>
+      
+      <a class="list-group-item" href="../proc/check_m_exclusive.html">check_m_exclusive</a>
+      
+      <a class="list-group-item" href="../proc/check_m_exclusive_clasg.html">check_m_exclusive_clasg</a>
+      
+      <a class="list-group-item" href="../proc/check_required_clasg.html">check_required_clasg</a>
+      
+      <a class="list-group-item" href="../proc/command_line_interface.html">command_line_interface</a>
+      
+      <a class="list-group-item" href="../proc/compute_dt.html">compute_dt</a>
+      
+      <a class="list-group-item" href="../proc/compute_inter_states.html">compute_inter_states</a>
+      
+      <a class="list-group-item" href="../proc/conservative2primitive.html">conservative2primitive</a>
+      
+      <a class="list-group-item" href="../proc/create.html">create</a>
+      
+      <a class="list-group-item" href="../proc/create%7E2.html">create</a>
+      
+      <a class="list-group-item" href="../proc/defined.html">defined</a>
+      
+      <a class="list-group-item" href="../proc/defined_clasg.html">defined_clasg</a>
+      
+      <a class="list-group-item" href="../proc/defined_group.html">defined_group</a>
+      
+      <a class="list-group-item" href="../proc/description.html">description</a>
+      
+      <a class="list-group-item" href="../proc/destroy.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E2.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E3.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E4.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E5.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E6.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E7.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E8.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/destroy%7E9.html">destroy</a>
+      
+      <a class="list-group-item" href="../proc/deuler_dt.html">dEuler_dt</a>
+      
+      <a class="list-group-item" href="../proc/e.html">E</a>
+      
+      <a class="list-group-item" href="../proc/errored.html">errored</a>
+      
+      <a class="list-group-item" href="../proc/euler_assign_euler.html">euler_assign_euler</a>
+      
+      <a class="list-group-item" href="../proc/euler_assign_real.html">euler_assign_real</a>
+      
+      <a class="list-group-item" href="../proc/euler_local_error.html">euler_local_error</a>
+      
+      <a class="list-group-item" href="../proc/euler_multiply_euler.html">euler_multiply_euler</a>
+      
+      <a class="list-group-item" href="../proc/euler_multiply_real.html">euler_multiply_real</a>
+      
+      <a class="list-group-item" href="../proc/execute.html">execute</a>
+      
+      <a class="list-group-item" href="../proc/finalize.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E2.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E3.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E4.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E5.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E6.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E7.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E8.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize%7E9.html">finalize</a>
+      
+      <a class="list-group-item" href="../proc/finalize_cla.html">finalize_cla</a>
+      
+      <a class="list-group-item" href="../proc/finalize_clasg.html">finalize_clasg</a>
+      
+      <a class="list-group-item" href="../proc/finish.html">finish</a>
+      
+      <a class="list-group-item" href="../proc/free.html">free</a>
+      
+      <a class="list-group-item" href="../proc/free_cla.html">free_cla</a>
+      
+      <a class="list-group-item" href="../proc/free_clasg.html">free_clasg</a>
+      
+      <a class="list-group-item" href="../proc/free_object.html">free_object</a>
+      
+      <a class="list-group-item" href="../proc/get_args_from_invocation.html">get_args_from_invocation</a>
+      
+      <a class="list-group-item" href="../proc/get_args_from_string.html">get_args_from_string</a>
+      
+      <a class="list-group-item" href="../proc/get_cla.html">get_cla</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_cli.html">get_cla_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list.html">get_cla_list</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_cli.html">get_cla_list_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_char.html">get_cla_list_varying_char</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_char_cli.html">get_cla_list_varying_char_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i1p.html">get_cla_list_varying_I1P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i1p_cli.html">get_cla_list_varying_I1P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i2p.html">get_cla_list_varying_I2P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i2p_cli.html">get_cla_list_varying_I2P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i4p.html">get_cla_list_varying_I4P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i4p_cli.html">get_cla_list_varying_I4P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i8p.html">get_cla_list_varying_I8P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_i8p_cli.html">get_cla_list_varying_I8P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_logical.html">get_cla_list_varying_logical</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_logical_cli.html">get_cla_list_varying_logical_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_r16p.html">get_cla_list_varying_R16P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_r16p_cli.html">get_cla_list_varying_R16P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_r4p.html">get_cla_list_varying_R4P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_r4p_cli.html">get_cla_list_varying_R4P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_r8p.html">get_cla_list_varying_R8P</a>
+      
+      <a class="list-group-item" href="../proc/get_cla_list_varying_r8p_cli.html">get_cla_list_varying_R8P_cli</a>
+      
+      <a class="list-group-item" href="../proc/get_clasg_indexes.html">get_clasg_indexes</a>
+      
+      <a class="list-group-item" href="../proc/h.html">H</a>
+      
+      <a class="list-group-item" href="../proc/impose_boundary_conditions.html">impose_boundary_conditions</a>
+      
+      <a class="list-group-item" href="../proc/init.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E2.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E3.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E4.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E5.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E6.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E7.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E8.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E9.html">init</a>
+      
+      <a class="list-group-item" href="../proc/init%7E10.html">init</a>
+      
+      <a class="list-group-item" href="../proc/initialize.html">initialize</a>
+      
+      <a class="list-group-item" href="../proc/integer_to_string.html">integer_to_string</a>
+      
+      <a class="list-group-item" href="../proc/integrate.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E2.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E3.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E4.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E5.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E6.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E7.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/integrate%7E8.html">integrate</a>
+      
+      <a class="list-group-item" href="../proc/interpolate.html">interpolate</a>
+      
+      <a class="list-group-item" href="../proc/new_dt.html">new_Dt</a>
+      
+      <a class="list-group-item" href="../proc/optional_int_to_string.html">optional_int_to_string</a>
+      
+      <a class="list-group-item" href="../proc/output.html">output</a>
+      
+      <a class="list-group-item" href="../proc/p.html">p</a>
+      
+      <a class="list-group-item" href="../proc/parse.html">parse</a>
+      
+      <a class="list-group-item" href="../proc/parse_clasg.html">parse_clasg</a>
+      
+      <a class="list-group-item" href="../proc/passed.html">passed</a>
+      
+      <a class="list-group-item" href="../proc/passed_clasg.html">passed_clasg</a>
+      
+      <a class="list-group-item" href="../proc/primitive2conservative.html">primitive2conservative</a>
+      
+      <a class="list-group-item" href="../proc/print_usage.html">print_usage</a>
+      
+      <a class="list-group-item" href="../proc/print_version.html">print_version</a>
+      
+      <a class="list-group-item" href="../proc/r.html">r</a>
+      
+      <a class="list-group-item" href="../proc/real_multiply_euler.html">real_multiply_euler</a>
+      
+      <a class="list-group-item" href="../proc/reconstruct_interfaces_states.html">reconstruct_interfaces_states</a>
+      
+      <a class="list-group-item" href="../proc/riemann_solver.html">riemann_solver</a>
+      
+      <a class="list-group-item" href="../proc/save_man_page.html">save_man_page</a>
+      
+      <a class="list-group-item" href="../proc/save_results.html">save_results</a>
+      
+      <a class="list-group-item" href="../proc/save_time_serie.html">save_time_serie</a>
+      
+      <a class="list-group-item" href="../proc/savefig.html">savefig</a>
+      
+      <a class="list-group-item" href="../proc/set_mutually_exclusive_groups.html">set_mutually_exclusive_groups</a>
+      
+      <a class="list-group-item" href="../proc/signature.html">signature</a>
+      
+      <a class="list-group-item" href="../proc/signature_cla.html">signature_cla</a>
+      
+      <a class="list-group-item" href="../proc/signature_clasg.html">signature_clasg</a>
+      
+      <a class="list-group-item" href="../proc/sub_euler.html">sub_euler</a>
+      
+      <a class="list-group-item" href="../proc/tokenize.html">tokenize</a>
+      
+      <a class="list-group-item" href="../proc/update_previous.html">update_previous</a>
+      
+      <a class="list-group-item" href="../proc/update_previous%7E2.html">update_previous</a>
+      
+      <a class="list-group-item" href="../proc/upper_case.html">Upper_Case</a>
+      
+      <a class="list-group-item" href="../proc/usage.html">usage</a>
+      
+      <a class="list-group-item" href="../proc/usage_cla.html">usage_cla</a>
+      
+      <a class="list-group-item" href="../proc/usage_clasg.html">usage_clasg</a>
+      
+      <a class="list-group-item" href="../proc/vec_to_string.html">vec_to_string</a>
+      
+      <a class="list-group-item" href="../interface/weno_constructor_upwind.html">weno_constructor_upwind</a>
+      
+      <a class="list-group-item" href="../proc/weno_constructor_upwind_init.html">weno_constructor_upwind_init</a>
+      
+    </div>
+  </div>
+  
+  
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    <h2>
+subroutine init()
+    
+    
+    
+</h2>
+    
+  
+
+
+
+    <h3>Arguments</h3>
+    
+      <em>None</em>
+    
+    
+    
+    <h3>Description</h3>
+    <p>Initialize the field.</p>
+    
+    
+     <h3>Calls</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: proc~~init~~CallsGraph Pages: 1 -->
+<svg id="procinitCallsGraph" width="279pt" height="52pt"
+ viewBox="0.00 0.00 279.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~init~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
+<title>proc~~init~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-48 275,-48 275,4 -4,4"/>
+<!-- proc~init -->
+<g id="proc~~init~~CallsGraph_node1" class="node"><title>proc~init</title>
+<polygon fill="none" stroke="black" points="54,-44 0,-44 0,-20 54,-20 54,-44"/>
+<text text-anchor="middle" x="27" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">init</text>
+</g>
+<!-- str -->
+<g id="proc~~init~~CallsGraph_node2" class="node"><title>str</title>
+<polygon fill="#777777" stroke="#777777" points="271,-44 217,-44 217,-20 271,-20 271,-44"/>
+<text text-anchor="middle" x="244" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">str</text>
+</g>
+<!-- proc~init&#45;&gt;str -->
+<g id="proc~~init~~CallsGraph_edge2" class="edge"><title>proc~init&#45;&gt;str</title>
+<path fill="none" stroke="black" d="M54.2448,-32.5169C65.2845,-32.71 78.2662,-32.9054 90,-33 130.443,-33.3261 140.557,-33.3261 181,-33 189.25,-32.9335 198.118,-32.8171 206.493,-32.6868"/>
+<polygon fill="black" stroke="black" points="206.815,-36.1821 216.755,-32.5169 206.699,-29.183 206.815,-36.1821"/>
+</g>
+<!-- proc~save_time_serie -->
+<g id="proc~~init~~CallsGraph_node3" class="node"><title>proc~save_time_serie</title>
+<g id="a_proc~~init~~CallsGraph_node3"><a xlink:href="../proc/save_time_serie.html" xlink:title="save_time_serie">
+<polygon fill="#d9534f" stroke="#d9534f" points="181,-24 90,-24 90,-0 181,-0 181,-24"/>
+<text text-anchor="middle" x="135.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">save_time_serie</text>
+</a>
+</g>
+</g>
+<!-- proc~init&#45;&gt;proc~save_time_serie -->
+<g id="proc~~init~~CallsGraph_edge3" class="edge"><title>proc~init&#45;&gt;proc~save_time_serie</title>
+<path fill="none" stroke="black" d="M54.0528,-27.1074C61.8379,-25.6455 70.6832,-23.9844 79.5905,-22.3116"/>
+<polygon fill="black" stroke="black" points="80.438,-25.7138 89.6202,-20.4281 79.146,-18.834 80.438,-25.7138"/>
+</g>
+<!-- proc~save_time_serie&#45;&gt;str -->
+<g id="proc~~init~~CallsGraph_edge1" class="edge"><title>proc~save_time_serie&#45;&gt;str</title>
+<path fill="none" stroke="black" d="M181.049,-20.3659C189.625,-21.9766 198.511,-23.6453 206.784,-25.1989"/>
+<polygon fill="black" stroke="black" points="206.392,-28.6864 216.866,-27.0922 207.684,-21.8066 206.392,-28.6864"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="26pt"
+ viewBox="0.00 0.00 641.00 25.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.811906 0.811906) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 785.5,-28 785.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="212,-24 158,-24 158,-0 212,-0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="294,-24 230,-24 230,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="262" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="439.5,-24 384.5,-24 384.5,-0 439.5,-0 439.5,-24"/>
+<text text-anchor="middle" x="412" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="594,-24 458,-24 458,-0 594,-0 594,-24"/>
+<text text-anchor="middle" x="526" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="666,-24 612,-24 612,-0 666,-0 666,-24"/>
+<text text-anchor="middle" x="639" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="781.5,-24 684.5,-24 684.5,-0 781.5,-0 781.5,-24"/>
+<text text-anchor="middle" x="733" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+     
+     <h3>Called By</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: proc~~init~~CalledByGraph Pages: 1 -->
+<svg id="procinitCalledByGraph" width="202pt" height="32pt"
+ viewBox="0.00 0.00 202.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~init~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~init~~CalledByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 198,-28 198,4 -4,4"/>
+<!-- proc~init -->
+<g id="proc~~init~~CalledByGraph_node1" class="node"><title>proc~init</title>
+<polygon fill="none" stroke="black" points="194,-24 140,-24 140,-0 194,-0 194,-24"/>
+<text text-anchor="middle" x="167" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">init</text>
+</g>
+<!-- program~integrate_euler_1d -->
+<g id="proc~~init~~CalledByGraph_node2" class="node"><title>program~integrate_euler_1d</title>
+<g id="a_proc~~init~~CalledByGraph_node2"><a xlink:href="../program/integrate_euler_1d.html" xlink:title="integrate_euler_1D">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="104,-24 0,-24 0,-0 104,-0 104,-24"/>
+<text text-anchor="middle" x="52" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">integrate_euler_1D</text>
+</a>
+</g>
+</g>
+<!-- program~integrate_euler_1d&#45;&gt;proc~init -->
+<g id="proc~~init~~CalledByGraph_edge1" class="edge"><title>program~integrate_euler_1d&#45;&gt;proc~init</title>
+<path fill="none" stroke="black" d="M104.21,-12C112.818,-12 121.591,-12 129.721,-12"/>
+<polygon fill="black" stroke="black" points="129.969,-15.5001 139.969,-12 129.969,-8.5001 129.969,-15.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="26pt"
+ viewBox="0.00 0.00 641.00 25.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.811906 0.811906) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 785.5,-28 785.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,-0 139.5,-0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="212,-24 158,-24 158,-0 212,-0 212,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="294,-24 230,-24 230,-0 294,-0 294,-24"/>
+<text text-anchor="middle" x="262" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="366,-24 312,-24 312,-0 366,-0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="439.5,-24 384.5,-24 384.5,-0 439.5,-0 439.5,-24"/>
+<text text-anchor="middle" x="412" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="594,-24 458,-24 458,-0 594,-0 594,-24"/>
+<text text-anchor="middle" x="526" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="666,-24 612,-24 612,-0 666,-0 666,-24"/>
+<text text-anchor="middle" x="639" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="781.5,-24 684.5,-24 684.5,-0 781.5,-0 781.5,-24"/>
+<text text-anchor="middle" x="733" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+    <br>
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pi"></span>real(kind=R_P),</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>pi</strong></td><td> =</td><td>4._R_P*atan(1._R_P)</td><td><p>Pi greek.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i"></span>integer(kind=I_P),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td><p>Space counter.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rho_sin"></span>real(kind=R_P),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>rho_sin</strong></td><td></td><td></td><td><p>Sinusoidal density distribution.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dx%7E2"></span>real(kind=R_P),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Dx</strong></td><td></td><td></td><td><p>Space step discretization.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cp0%7E2"></span>real(kind=R_P),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>cp0</strong>(1:Ns)</td><td></td><td></td><td><p>Specific heat at constant pressure.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cv0%7E2"></span>real(kind=R_P),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>cv0</strong>(1:Ns)</td><td></td><td></td><td><p>Specific heat at constant volume.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-initial_state"></span>real(kind=R_P),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>initial_state</strong>(:,:)</td><td></td><td></td><td><p>Initial state of primitive variables.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre>  <span class="k">subroutine </span><span class="n">init</span><span class="p">()</span>
+  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+  <span class="c">!&lt; Initialize the field.</span>
+  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R_P</span><span class="p">),</span> <span class="k">parameter</span>   <span class="kd">::</span> <span class="n">pi</span><span class="o">=</span><span class="mf">4._R_P</span> <span class="o">*</span> <span class="nb">atan</span><span class="p">(</span><span class="mf">1._R_P</span><span class="p">)</span> <span class="c">!&lt; Pi greek.</span>
+  <span class="kt">integer</span><span class="p">(</span><span class="n">I_P</span><span class="p">)</span>           <span class="kd">::</span> <span class="n">i</span>                        <span class="c">!&lt; Space counter.</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R_P</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">rho_sin</span>                  <span class="c">!&lt; Sinusoidal density distribution.</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R_P</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">Dx</span>                       <span class="c">!&lt; Space step discretization.</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R_P</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">cp0</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">Ns</span><span class="p">)</span>                <span class="c">!&lt; Specific heat at constant pressure.</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R_P</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">cv0</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">Ns</span><span class="p">)</span>                <span class="c">!&lt; Specific heat at constant volume.</span>
+  <span class="kt">real</span><span class="p">(</span><span class="n">R_P</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">initial_state</span><span class="p">(:,:)</span>       <span class="c">!&lt; Initial state of primitive variables.</span>
+  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+
+  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+  <span class="k">allocate</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">Ni</span><span class="p">))</span>
+  <span class="k">allocate</span><span class="p">(</span><span class="n">initial_state</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">Np</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="n">Ni</span><span class="p">))</span>
+  <span class="n">cp0</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">104</span><span class="mf">0._R_P</span>
+  <span class="n">cv0</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">74</span><span class="mf">2.85_R_P</span>
+  <span class="n">Dx</span><span class="o">=</span><span class="mf">1._R_P</span><span class="o">/</span><span class="n">Ni</span>
+  <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Ni</span>
+    <span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Dx</span> <span class="o">*</span> <span class="n">i</span> <span class="o">-</span> <span class="mf">0.5_R_P</span> <span class="o">*</span> <span class="n">Dx</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">&lt;=</span><span class="mf">0.12_R_P</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">      </span><span class="n">initial_state</span><span class="p">(:,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.857143_R_P</span><span class="p">,</span> <span class="p">&amp;</span> <span class="c">! rho(s)</span>
+                             <span class="mf">2.629369_R_P</span><span class="p">,</span> <span class="p">&amp;</span> <span class="c">! u</span>
+                             <span class="mi">1</span><span class="mf">0.33333_R_P</span><span class="p">,</span> <span class="p">&amp;</span> <span class="c">! p</span>
+                             <span class="mf">3.857143_R_P</span><span class="p">,</span> <span class="p">&amp;</span> <span class="c">! sum(rho(s))</span>
+                             <span class="n">cp0</span><span class="o">/</span><span class="n">cv0</span><span class="p">]</span>        <span class="c">! gamma = cp/cv</span>
+    <span class="k">else</span>
+<span class="k">      </span><span class="n">rho_sin</span> <span class="o">=</span> <span class="mf">1._R_P</span> <span class="o">+</span> <span class="mf">0.2_R_P</span> <span class="o">*</span> <span class="nb">sin</span> <span class="p">(</span><span class="mf">8._R_P</span> <span class="o">*</span> <span class="n">x</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="mf">2._R_P</span> <span class="o">*</span> <span class="n">pi</span><span class="p">)</span>
+      <span class="n">initial_state</span><span class="p">(:,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="p">[</span><span class="n">rho_sin</span><span class="p">,</span> <span class="p">&amp;</span> <span class="c">! rho(s)</span>
+                             <span class="mf">0._R_P</span><span class="p">,</span>  <span class="p">&amp;</span> <span class="c">! u</span>
+                             <span class="mf">1._R_P</span><span class="p">,</span>  <span class="p">&amp;</span> <span class="c">! p</span>
+                             <span class="n">rho_sin</span><span class="p">,</span> <span class="p">&amp;</span> <span class="c">! sum(rho(s))</span>
+                             <span class="n">cp0</span><span class="o">/</span><span class="n">cv0</span><span class="p">]</span>   <span class="c">! gamma = cp/cv</span>
+    <span class="n">endif</span>
+  <span class="n">enddo</span>
+  <span class="k">call </span><span class="n">rk_integrator</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">stages</span><span class="o">=</span><span class="n">rk_stages</span><span class="p">)</span>
+  <span class="k">call </span><span class="n">domain</span><span class="p">%</span><span class="n">init</span><span class="p">(</span><span class="n">Ni</span><span class="o">=</span><span class="n">Ni</span><span class="p">,</span> <span class="n">Ns</span><span class="o">=</span><span class="n">Ns</span><span class="p">,</span> <span class="n">Dx</span><span class="o">=</span><span class="n">Dx</span><span class="p">,</span> <span class="n">BC_L</span><span class="o">=</span><span class="s1">&#39;TRA&#39;</span><span class="p">,</span> <span class="n">BC_R</span><span class="o">=</span><span class="s1">&#39;TRA&#39;</span><span class="p">,</span> <span class="n">initial_state</span><span class="o">=</span><span class="n">initial_state</span><span class="p">,</span> <span class="n">cp0</span><span class="o">=</span><span class="n">cp0</span><span class="p">,</span> <span class="n">cv0</span><span class="o">=</span><span class="n">cv0</span><span class="p">,</span> <span class="n">ord</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
+  <span class="k">call </span><span class="n">save_time_serie</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Shu-Osher shock tube problem&#39;</span><span class="p">,</span>                                                           <span class="p">&amp;</span>
+                       <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;shu-osher-order-&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">str</span><span class="p">(.</span><span class="n">true</span><span class="p">.,</span> <span class="n">order</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39;-grid-&#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="n">str</span><span class="p">(.</span><span class="n">true</span><span class="p">.,</span> <span class="n">Ni</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39;.dat&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+                       <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
+  <span class="n">t</span> <span class="o">=</span> <span class="mf">0._R_P</span>
+  <span class="k">return</span>
+  <span class="c">!---------------------------------------------------------------------------------------------------------------------------------</span>
+  <span class="n">endsubroutine</span> <span class="n">init</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-6">&copy; 2015 Shu-Osher-shock-tube-problem was written by Stefano Zaghi. </div>
+        <div class="col-md-6"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a>.</span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
