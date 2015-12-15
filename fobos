@@ -1,6 +1,7 @@
 [modes]
 modes = gnu gnu-debug
         intel intel-debug
+        gnu-coverage
 
 [common-variables]
 $CSTATIC_GNU     = -cpp -c -frealloc-lhs
@@ -70,7 +71,36 @@ quiet           = False
 log             = True
 jobs            = 10
 
+[gnu-coverage]
+help            = Build in release-coverage mode with GNU gfortran
+compiler        = gnu
+cflags          = $CSTATIC_GNU $OPTIMIZE
+lflags          = $OPTIMIZE
+coverage        = True
+cflags_heritage = True
+build_dir       = build
+mod_dir         = mod
+obj_dir         = obj
+src             = src
+colors          = True
+quiet           = False
+log             = True
+jobs            = 10
+
 # rules
+[rule-coverage-analysis]
+help    = Rule for performing coverage analysis and saving reports in markdown
+rule_1  = FoBiS.py build -mode gnu-coverage
+rule_2  = (time ./build/euler-1D --Ni 384 --order 7) &> profiling/Ni_384-Order_7/cputime
+rule_3  = gcov -o ./build/obj/ src/Euler-1D/*.f90
+rule_4  = FoBiS.py rule -gcov_analyzer profiling/Ni_384-Order_7 Coverage-Analysis
+rule_5  = rm -rf *.gcov build*
+rule_6  = FoBiS.py build -mode gnu-coverage
+rule_7  = (time ./build/euler-1D --Ni 2048 --order 1) &> profiling/Ni_2048-Order_1/cputime
+rule_8  = gcov -o ./build/obj/ src/Euler-1D/*.f90
+rule_9  = FoBiS.py rule -gcov_analyzer profiling/Ni_2048-Order_1 Coverage-Analysis
+rule_10 = rm -rf *.gcov build*
+
 [rule-makedoc]
 help   = Rule for building documentation from source files
 rule_1 = rm -rf doc/html/*
