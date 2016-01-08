@@ -96,10 +96,20 @@ rule_3  = gcov -o ./build/obj/ src/Euler-1D/*.f90
 rule_4  = FoBiS.py rule -gcov_analyzer profiling/Ni_384-Order_7 Coverage-Analysis
 rule_5  = rm -rf *.gcov build*
 rule_6  = FoBiS.py build -mode gnu-coverage
-rule_7  = (time ./build/euler-1D --Ni 2048 --order 1) &> profiling/Ni_2048-Order_1/cputime
+rule_7  = (time ./build/euler-1D --Ni 384 --order 5) &> profiling/Ni_384-Order_5/cputime
 rule_8  = gcov -o ./build/obj/ src/Euler-1D/*.f90
-rule_9  = FoBiS.py rule -gcov_analyzer profiling/Ni_2048-Order_1 Coverage-Analysis
+rule_9  = FoBiS.py rule -gcov_analyzer profiling/Ni_384-Order_5 Coverage-Analysis
 rule_10 = rm -rf *.gcov build*
+rule_11 = FoBiS.py build -mode gnu-coverage
+rule_12 = (time ./build/euler-1D --Ni 768  --order 3) &> profiling/Ni_768-Order_3/cputime
+rule_13 = gcov -o ./build/obj/ src/Euler-1D/*.f90
+rule_14 = FoBiS.py rule -gcov_analyzer profiling/Ni_768-Order_3 Coverage-Analysis
+rule_15 = rm -rf *.gcov build*
+rule_16 = FoBiS.py build -mode gnu-coverage
+rule_17 = (time ./build/euler-1D --Ni 2048 --order 1) &> profiling/Ni_2048-Order_1/cputime
+rule_18 = gcov -o ./build/obj/ src/Euler-1D/*.f90
+rule_19 = FoBiS.py rule -gcov_analyzer profiling/Ni_2048-Order_1 Coverage-Analysis
+rule_20 = rm -rf *.gcov build*
 
 [rule-makedoc]
 help   = Rule for building documentation from source files
